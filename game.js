@@ -120,3 +120,17 @@ function animatePress(currentColour) {
     $("#" + currentColour).removeClass("pressed");
   }, 100);
 }
+
+
+
+function aboutGame(){
+    document.querySelector(".main").classList.toggle("display-none")
+    document.querySelector(".main").classList.toggle("main-page");
+    document.querySelector(".about").classList.toggle("display-inline");
+    document.querySelector(".about").classList.toggle("about-game");
+
+    if(document.querySelector(".main").classList[1]=="display-none")
+        $("button").text("Go back");
+    else 
+        $("button").text("How to play?");
+}

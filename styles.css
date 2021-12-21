@@ -1,6 +1,51 @@
+
 body {
+  margin: 0;
   text-align: center;
   background-color: #011F3F;
+  background-image: url(https://wallpaperaccess.com/full/4032900.jpg);
+background-image: url(https://wallpaperaccess.com/full/1236453.jpg);
+background-image: url(https://images6.alphacoders.com/380/380564.jpg);
+}
+
+.about-game {
+  display: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #6f42c1;
+  padding: 10px 20px;
+}
+
+.brand {
+  display: inline-block;
+  text-shadow: 2px 2px #adb5bd;
+  font-family: 'Lilita One', fantasy;
+  font-size: 1.4em;
+  color: white;
+}
+
+.nav-item {
+  border: none;
+  background-color: inherit;
+  align-content: right;
+  display: inline-block; 
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  color: #adb5bd;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-item:hover {
+  color: #F2F013;
+}
+
+.brand:hover {
+  color: #adb5bd;
+  text-shadow: none;
 }
 
 #level-title {
@@ -12,18 +57,21 @@ body {
 
 .container {
   display: block;
-  width: 50%;
+  width: 100%;
   margin: auto;
+}
 
+.row {
+  display: block;
 }
 
 .btn {
-  margin: 25px;
+margin: 25p;
   display: inline-block;
-  height: 200px;
-  width: 200px;
-  border: 10px solid black;
-  border-radius: 20%;
+  height: 12.5em;
+  width: 12.5em;
+  border: 0.6em solid black;
+border-radius: 20;
 }
 
 .game-over {
@@ -32,22 +80,51 @@ body {
 }
 
 .red {
+  border-top-right-radius: 100%;
   background-color: red;
 }
 
 .green {
+  border-top-left-radius: 100%;
   background-color: green;
 }
 
 .blue {
+  border-bottom-right-radius: 100%;
   background-color: blue;
 }
 
 .yellow {
+  border-bottom-left-radius: 100%;
   background-color: yellow;
 }
 
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
+}
+
+
+@media only screen and (max-device-width: 500px){
+  .btn {
+         height: 25em;
+         width: 25em;
+         border: 1.2em solid black;
+  }
+
+  .container {
+    margin-top: 170px;
+  }
+
+  .brand {
+    font-size: 2em;
+  }
+}
+
+.display-none {
+  display: none;
+}
+
+.display-inline {
+  display: inline;
 }
