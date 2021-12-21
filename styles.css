@@ -3,9 +3,29 @@ body {
   margin: 0;
   text-align: center;
   background-color: #011F3F;
-  background-image: url(https://wallpaperaccess.com/full/4032900.jpg);
-background-image: url(https://wallpaperaccess.com/full/1236453.jpg);
-background-image: url(https://images6.alphacoders.com/380/380564.jpg);
+ackground-image: url(https://wallpaperaccess.com/full/4032900.jpg);
+ackground-image: url(https://wallpaperaccess.com/full/1236453.jpg);
+ackground-image: url(https://images6.alphacoders.com/380/380564.jpg);
+background-color: #adb5bd;
+background: rgb(186,172,172);
+background: linear-gradient(90deg, rgba(186,172,172,1) 0%, rgba(227,227,227,0.6250875350140056) 49%, rgba(150,180,181,1) 100%);
+}
+
+.loading-screen {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  width: 80px;
+}
+
+.display-block {
+  display: block;
 }
 
 .about-game {
@@ -23,15 +43,13 @@ background-image: url(https://images6.alphacoders.com/380/380564.jpg);
   display: inline-block;
   text-shadow: 2px 2px #adb5bd;
   font-family: 'Lilita One', fantasy;
-  font-size: 1.4em;
+  font-size: 1.6em;
   color: white;
 }
 
 .nav-item {
   border: none;
   background-color: inherit;
-  align-content: right;
-  display: inline-block; 
   font-family: 'Montserrat', sans-serif;
   font-size: 1em;
   color: #adb5bd;
@@ -48,17 +66,71 @@ background-image: url(https://images6.alphacoders.com/380/380564.jpg);
   text-shadow: none;
 }
 
-#level-title {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 3rem;
-  margin:  5%;
-  color: #FEF2BF;
+.main {
+  margin: 5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.container {
-  display: block;
-  width: 100%;
-  margin: auto;
+#level-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3em;
+  color: #FEF2BF;
+  color: white;
+}
+
+.header-animation {
+  position: relative;
+  padding: 0.2em;
+  background-color: #6f42c1;
+  border-radius: 0.4em;
+  border: 2px solid white;
+  animation-name: pulse;
+  animation-duration: 4s;
+  animation-iteration-count: 2;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.left-container {
+  width: 30rem;
+  margin-bottom: 2em;
+}
+
+.left-container-buttons {
+  margin-top: 2em;
+  display: flex;
+  justify-content: space-around;
+}
+
+.left-btn {
+  font-family: 'Lilita One', fantasy;
+  font-size: 1.8em;
+  color: white;
+  border-radius: 0.4em;
+  border: 2px solid white;
+  background-color: #6f42c1;
+  padding: 8px 23px;
+}
+
+.left-btn:hover {
+  border-color: #adb5bd;
+  color: #adb5bd;
+  box-shadow: 5px 5px 5px 5px black;
+}
+.right-container {
+  width: 40rem;
 }
 
 .row {
@@ -72,6 +144,7 @@ margin: 25p;
   width: 12.5em;
   border: 0.6em solid black;
 border-radius: 20;
+ box-shadow: 5px 5px 5px 5px black;
 }
 
 .game-over {
@@ -112,13 +185,53 @@ border-radius: 20;
          border: 1.2em solid black;
   }
 
-  .container {
-    margin-top: 170px;
+  .right-container {
+    margin-top: 80px;
+    width: 100%;
+  }
+
+  .left-container {
+    width: 100%;
   }
 
   .brand {
     font-size: 2em;
   }
+
+  .main {
+    justify-content: center;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+
+  .header-animation {
+    width: 70%;
+    margin: auto;
+  }
+
+}
+
+.about-list {
+  font-size: 1.3em;
+  text-align: left;
+  line-height: 2em;
+}
+
+.bottom-container {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9em;
+  background-color: #6f42c1;
+  padding: 10px 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #adb5bd;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #F2F013;
 }
 
 .display-none {

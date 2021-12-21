@@ -1,4 +1,12 @@
 
+//Removing the loading screen and bringing the home-screen after 2 seconds
+setTimeout(function(){
+    $(".loading-screen").css("display","none");
+    $(".home-screen").removeClass("display-none");
+},2000);
+
+
+
 //To fill the gamePattern array, a random number between 0-3 is generated and depending on that next value for gamepattern array is
 //taken from the buttonColours array.
 var buttonColours = ["red", "blue", "green", "yellow"];
@@ -16,28 +24,38 @@ var started = false;
 //2. Create a new variable called level and start at level 0.
 var level = 0;
 
-//Detect any keypress on the document and start the game if not started
-$(document).keypress(function() {
-   if (!started) {
+//Start game when clicked on start button
+function start_game(){
+    if (!started) {
 
-    //The h1 title starts out saying "Press A Key to Start", when the game has started, change this to say "Level 0".
-    $("#level-title").text("Level " + level);
-    nextSequence();
-    started = true;
-  }
-});
+        //The h1 title starts out saying "Press A Key to Start", when the game has started, change this to say "Level 0".
+        $("#level-title").text("Level " + level);
+        nextSequence();
+        started = true;
+    }
+}
+//Detect any keypress on the document and start the game if not started
+$(document).keypress(start_game);
 
 
 //Create userPattern array when the colour buttons are clicked , playSound corresponding to the button and animate it
 $(".btn").click(function() {
-    var userChosenColour = $(this).attr("id");
-    userClickedPattern.push(userChosenColour);
 
-    playSound(userChosenColour);
-    animatePress(userChosenColour);
 
-    //To check whether the button clicked by the user matches the gamePattern
-    checkAnswer(userClickedPattern.length-1);
+    if(!started){
+        $("h1").text("First start the game");
+    }
+    else{
+        var userChosenColour = $(this).attr("id");
+        userClickedPattern.push(userChosenColour);
+
+        playSound(userChosenColour);
+        animatePress(userChosenColour);
+
+        //To check whether the button clicked by the user matches the gamePattern
+        checkAnswer(userClickedPattern.length-1);
+
+    }
 });
 
 
@@ -93,6 +111,8 @@ function checkAnswer(currentLevel){
         },200);
 
         startOver();
+
+        $("#start").html("Restart Game");
     }
 
 }
@@ -133,4 +153,8 @@ function aboutGame(){
         $("button").text("Go back");
     else 
         $("button").text("How to play?");
+}
+
+function exit(){
+ setTimeout("window.close()", 500);
 }
