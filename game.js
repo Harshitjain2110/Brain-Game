@@ -150,9 +150,9 @@ function aboutGame(){
     document.querySelector(".about").classList.toggle("about-game");
 
     if(document.querySelector(".main").classList[1]=="display-none")
-        $("button").text("Go back");
+        $(".navbar button").text("Go back");
     else 
-        $("button").text("How to play?");
+        $(".navbar button").text("How to play?");
 }
 
 function exit(){

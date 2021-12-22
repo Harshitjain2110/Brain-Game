@@ -14,77 +14,85 @@
 </head>
 
 <body>
+
+<!--Loading Screen div given 100vh 100vw dimensions.-->
+<!--Display property is set to none after delay of 2sec-->
   <div class="loading-screen">
     <img src="HJ_creations.png">
     <img class="spinner" src="Spin-1s-200px.gif">
-    
-
   </div>
 
-
+<!-- After loading screen this home screen is seen. -->
+<!-- Display property is restored back ,which was set to none in the beginning, by removing display-none class.  -->
+<!-- This home screen div contains four main divs - 1.navbar
+                                               2. main-page or main 
+                                               3. bottom-container or footer
+                                               4. is hidden , which becomes visible by clicking on "How to play button" -->
   <div class="home-screen display-none">
-      <nav class="navbar">
-    <div class="brand">BRAIN GAME</div>
-    <button onclick="aboutGame()" class="nav-item">🤔 How to play?</button>
-  </nav>
 
-  <div class="about-game about">
-    <h1>Popularly known as <em>"SIMON GAME"</em></h1>
-    <ul class="about-list">
-      <li>Simon is named after the simple children's game of Simon Says.</li>
-      <li>The game contains four colored buttons, each producing a particular tone when it is clicked or activated by the system.</li>
-      <li>A round in the game consists of the device lighting up one button in each level, after which the player must reproduce the order of buttons from the very starting of the game by clicking the buttons.</li>
-      <li>As the game progresses, the number of buttons to be pressed increases.</li>
-      <li>Level is incremented each time the user is able to reproduce the correct sequence.</li>
-    </ul>
+<!-- Navbar div -->
+    <nav class="navbar">
+      <div class="brand">BRAIN GAME</div>
+      <button onclick="aboutGame()" class="nav-item">🤔 How to play?</button>
+    </nav>
 
-    <h2>Why it's named BRAIN GAME ?</h2>
-    <ul class="about-list">
-      <li>The game indirectly tests the memorising power of user's brain.</li>
-      <li>How well the user is at remembering the sequences or pattern?</li>
-    </ul>
+<!-- This div is hidden gets visible when "How to play button is pressed" button is pressed. -->
+    <div class="about-game about">
+      <h1>Popularly known as <em>"SIMON GAME"</em></h1>
+      <ul class="about-list">
+        <li>Simon is named after the simple children's game of Simon Says.</li>
+        <li>The game contains four colored buttons, each producing a particular tone when it is clicked or activated by the system.</li>
+        <li>A round in the game consists of the device lighting up one button in each level, after which the player must reproduce the order of buttons from the very starting of the game by clicking the buttons.</li>
+        <li>As the game progresses, the number of buttons to be pressed increases.</li>
+        <li>Level is incremented each time the user is able to reproduce the correct sequence.</li>
+      </ul>
 
-    <h2>What you can do?</h2>
-    <ul class="about-list">
-      <li>If you feel that this game can sharpen your brain or can make impact on your brain in positive manner</li>
-      <li>Then you should recommend it to children of age less than 10yrs so that they can benefit from it in their early childhood.</li>
-    </ul>
-  </div>
-  
-  <div class="main-page main">
-    <div class="left-container">
-      <div class="header-animation"><h1 id="level-title">Press A Key to Start</h1></div>
-      
-      <div class="left-container-buttons">
-        <button id="exit" class="left-btn" onclick="exit()"><span class="material-icons">exit_to_app</span> Exit Game</button>
-        <button id="start" class="left-btn" onclick="start_game()"><span class="material-icons">play_arrow</span> Start Game</button>
-      </div>
-      
+      <h2>Why it's named BRAIN GAME ?</h2>
+      <ul class="about-list">
+        <li>The game indirectly tests the memorising power of user's brain.</li>
+        <li>How well the user is at remembering the sequences or pattern?</li>
+      </ul>
+
+      <h2>What you can do?</h2>
+      <ul class="about-list">
+        <li>If you feel that this game can sharpen your brain or can make impact on your brain in positive manner</li>
+        <li>Then you should recommend it to children of age less than 10yrs so that they can benefit from it in their early childhood.</li>
+      </ul>
     </div>
+
+<!-- This is the main part visible after the loading-screen apart from the bottom and navbar divs. -->
+    <div class="main-page main">
+
+    <!-- Left container contains the heading animation along with two buttons. -->
+      <div class="left-container">
+        <div class="header-animation"><h1 id="level-title">Press A Key to Start</h1></div>
+      
+        <div class="left-container-buttons">
+          <button id="exit" class="left-btn" onclick="exit()"><span class="material-icons">exit_to_app</span> Exit Game</button>
+          <button id="start" class="left-btn" onclick="start_game()"><span class="material-icons">play_arrow</span> Start Game</button>
+        </div>
+      </div>
     
-    <div class="right-container">
-      <div class="row">
+    <!-- Right container contains all the game buttons (coloured buttons) -->
+      <div class="right-container">
 
-         <div type="button" id="green" class="btn green"></div>
-         <div type="button" id="red" class="btn red"></div>
-      
+        <div class="row">
+          <div type="button" id="green" class="btn green"></div>
+          <div type="button" id="red" class="btn red"></div>
+        </div>
+
+        <div class="row">
+          <div type="button" id="yellow" class="btn yellow"></div>
+          <div type="button" id="blue" class="btn blue"></div>
+        </div>
       </div>
 
-      <div class="row">
-
-         <div type="button" id="yellow" class="btn yellow"></div>
-         <div type="button" id="blue" class="btn blue"></div>
-
-      </div>
     </div>
 
-  </div>
-
-  <div class="bottom-container">
-    Made with ❤️ + ☕ by <a href="https://harshitjain2110.github.io/Portfolio-Website/">Harshit Jain</a>
-  </div>
-
-
+<!-- This is the bottom container or the footer. -->
+    <div class="bottom-container">
+      Made with ❤️ + ☕ by <a href="https://harshitjain2110.github.io/Portfolio-Website/">Harshit Jain</a>
+    </div>
 
   </div>
   
